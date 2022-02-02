@@ -4,37 +4,31 @@
 npm install @s3bubble/player
 ```
 
-
+## DRM Example
 ```js
-
+s3bubble('<your div>').drm({
+    meta: {
+        backButton: 'yes',
+        subTitle: 'Hello World',
+        title: 'Title',
+        para: 'This is awesome',
+        showSocial: true,
+    },
+    widevine: 'r3eh9b',
+    playready: 'r3eh9b',
+    fairplay: 'r3ei3d',
+    assetid: '8a450047-23f1-4ebe-8b58-9fd82cf6362c',
+});
 ```
 
-# API
-
-## Available Params
-
-| Params              | Description                                                                 |
-| ------------------- | --------------------------------------------------------------------------- |
-| localFolderPath     | The path to the folder on your computer you want to upload                  |
-| s3UploadBucket      | The AWS S3 bucket name you want to upload to                                |
-| s3UploadFolder      | The AWS S3 folder name you want to upload to                                |
-| chunkSize           | The size to split the files into manageable chunks to upload                |
-| removeUploadedFiles | If set when a batch of files have been uploaded they will be delete locally |
-| filterExtensions    | Only upload files with specific extensions accepts array ['mp3','mp4']      |
-| accessKeyId         | Your AWS IAM access id                                                      |
-| secretAccessKey     | Your AWS IAM secret access key                                              |
-
-## Available Events
-
-| Events   | Description                                                |
-| -------- | ---------------------------------------------------------- |
-| progress | Lists progress, totalProgress, chunkedIndex, chunkedLength |
-| finished | When all files have been uploaded                          |
-| files    | Returns the batch of uploaded files                        |
-| error    | Lists any errors                                           |
-
-## Things to add
-
--   Set ACL's to public or private
--   Check if file exists first before uploading
--   Add retry
+## Basic Example
+```js
+s3bubble('s3bPlayer').video({
+    code: 'r5tbwg'
+}, function(player) {
+    console.log(player);
+    player.on('timeupdate', function(event) {
+        console.log('event', player.currentTime());
+    });
+});
+```
