@@ -4,7 +4,7 @@
 npm install @s3bubble/player
 ```
 
-## DRM Example
+## Setup Globals
 ```js
 window.s3bubbleGlobals = {
     debug: false,
