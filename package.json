@@ -1,6 +1,6 @@
 {
     "name": "@s3bubble/player",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Standalone S3Bubble Media Player",
     "main": "index.js",
     "scripts": {
@@ -15,8 +15,10 @@
         "ssai",
         "ads",
         "media",
+        "EZDRM",
         "video",
-        "player"
+        "player",
+        "DRM"
     ],
     "author": "Samuel East",
     "license": "ISC",
