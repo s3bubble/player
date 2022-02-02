@@ -1,0 +1,59 @@
+{
+    "name": "@s3bubble/player",
+    "version": "0.0.1",
+    "description": "Standalone S3Bubble Media Player",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server -S -C cert.pem -K key.pem"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/s3bubble/player.git"
+    },
+    "keywords": [
+        "aws",
+        "ssai",
+        "ads",
+        "media",
+        "video",
+        "player"
+    ],
+    "author": "Samuel East",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/s3bubble/player/issues"
+    },
+    "homepage": "https://github.com/s3bubble/player#readme",
+    "devDependencies": {
+        "grunt": "^1.4.1",
+        "grunt-contrib-concat": "2.0.0",
+        "grunt-contrib-connect": "2.0.0",
+        "grunt-contrib-cssmin": "3.0.0",
+        "grunt-contrib-jshint": "2.1.0",
+        "grunt-contrib-qunit": "3.1.0",
+        "grunt-contrib-uglify": "4.0.1",
+        "grunt-contrib-watch": "1.1.0",
+        "http-server": "^14.1.0"
+    },
+    "dependencies": {
+        "@s3bubble/videojs-contrib-dash-with-quality-levels": "^5.1.2",
+        "@s3bubble/videojs-s3bubble-bitrate-switcher": "0.0.6",
+        "@s3bubble/videojs-s3bubble-mediatailor": "0.0.3",
+        "@s3bubble/videojs-s3bubble-settings-menu": "0.0.3",
+        "@silvermine/videojs-chromecast": "1.3.2",
+        "crypto-js": "3.3.0",
+        "js-cookie": "2.2.1",
+        "m3u8-parser": "4.7.0",
+        "video.js": "^7.17.0",
+        "videojs-contextmenu-ui": "5.2.0",
+        "videojs-contrib-ads": "6.9.0",
+        "videojs-contrib-dash": "5.1.0",
+        "videojs-contrib-eme": "3.10.1",
+        "videojs-contrib-quality-levels": "2.1.0",
+        "videojs-hotkeys": "0.2.27",
+        "videojs-ima": "1.11.0",
+        "videojs-markers-plugin": "^1.0.2",
+        "videojs-mobile-ui": "0.4.1",
+        "videojs-vr": "^1.8.0"
+    }
+}
