@@ -23,7 +23,7 @@ s3bubble('<your div>').drm({
 
 ## Basic Example
 ```js
-s3bubble('s3bPlayer').video({
+s3bubble('<your div>').video({
     code: 'r5tbwg'
 }, function(player) {
     console.log(player);
