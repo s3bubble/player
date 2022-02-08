@@ -38,25 +38,24 @@ window.s3bubbleGlobals = {
 ```js
 s3bubble('<your div>').drm({
     meta: {
-        backButton: 'yes',
-        subTitle: 'Hello World',
-        title: 'Title',
-        para: 'This is awesome',
+        subTitle: '<your sub title>',
+        title: '<your title>',
+        para: '<your description>',
         showSocial: true,
     },
-    widevine: 'r3eh9b',
-    playready: 'r3eh9b',
-    fairplay: 'r3ei3d',
-    assetid: '8a450047-23f1-4ebe-8b58-9fd82cf6362c',
+    widevine: '<your widevine code>',
+    playready: '<your playready code>',
+    fairplay: '<your fairplay code>',
+    assetid: '<your fairplay asset id from ezdrm>',
 });
 ```
 
 ## Basic Example
 ```js
 s3bubble('<your div>').video({
-    code: 'r5tbwg'
+    code: '<your code>'
 }, function(player) {
-    console.log(player);
+    # You can listen to any video events here
     player.on('timeupdate', function(event) {
         console.log('event', player.currentTime());
     });
@@ -66,9 +65,9 @@ s3bubble('<your div>').video({
 ## HTML Example
 
 ``` html
-<div class="s3bv" data-code="r5tbwg"></div>
+<div class="s3bv" data-code="<your code>"></div>
 ```
 
 ``` html
-<div class="s3bdrm" data-widevine="r3eh9b" data-playready="r3eh9b" data-fairplay="r3ei3d" data-assetid="8a450047-23f1-4ebe-8b58-9fd82cf6362c"></div>
+<div class="s3bdrm" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
 ```
