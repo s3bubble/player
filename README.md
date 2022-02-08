@@ -71,3 +71,6 @@ s3bubble('<your div>').video({
 ``` html
 <div class="s3bdrm" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
 ```
+
+## Video Example
+[open demo](https://s3bubble.com/documentation/example-ezdrm-widevine-fairplay-playready-dash-hls)
