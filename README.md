@@ -55,7 +55,7 @@ s3bubble('<your div>').drm({
 s3bubble('<your div>').video({
     code: '<your code>'
 }, function(player) {
-    # You can listen to any video events here
+    // You can listen to any video events here
     player.on('timeupdate', function(event) {
         console.log('event', player.currentTime());
     });
