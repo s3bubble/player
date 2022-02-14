@@ -1,6 +1,6 @@
 {
     "name": "@s3bubble/player",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Standalone S3Bubble Media Player",
     "main": "index.js",
     "scripts": {
