@@ -4,31 +4,31 @@
 npm install @s3bubble/player
 ```
 
-## Setup Globals
+## Setup Globals - Player Options Will Override DRM Globals 
 ```js
 window.s3bubbleGlobals = {
     debug: false,
     autoplay: true,
     poweredBy: [{
         href: "https://s3bubble.com",
-        label: "Powered by dave.com"
+        label: "Powered by s3bubble.com"
     }, ],
     api: '<api key>',
-    locale: 'en',
+    locale: 'en', 
     poster: 'https://images.pexels.com/photos/8748734/pexels-photo-8748734.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     drm: {
         widevine: {
             keysystem: 'com.widevine.alpha',
-            license: 'https://widevine-dash.ezdrm.com/widevine-php/widevine-foreignkey.php?pX=000000'
+            license: 'https://<license>?pX=000000'
         },
         fairplay: {
             keysystem: 'com.apple.fps.1_0',
-            license: 'https://fps.ezdrm.com/api/licenses/347A5AB7-6A18-4710-0000-86AD80FDB943',
+            license: 'https://<license>.com',
             certificate: 'https://d25hd5yfa00000.cloudfront.net/fairplay.cer'
         },
         playeready: {
             keysystem: 'com.microsoft.playready',
-            license: 'https://playready.ezdrm.com/cency/preauth.aspx?pX=000000'
+            license: 'https://<license>?pX=000000'
         }
     }
 }
@@ -43,10 +43,31 @@ s3bubble('<your div>').drm({
         para: '<your description>',
         showSocial: true,
     },
-    widevine: '<your widevine code>',
-    playready: '<your playready code>',
-    fairplay: '<your fairplay code>',
-    assetid: '<your fairplay asset id from ezdrm>',
+    drm: {
+        authenticationXml: '<authenticationXml BuyDRM only>',
+        widevine: {
+            code: '<your widevine code>',
+            keysystem: 'com.widevine.alpha',
+            license: 'https://<license>.com'
+        },
+        playready: {
+            code: '<your playready code>',
+            keysystem: 'com.microsoft.playready',
+            license: 'https://<license>/rightsmanager.asmx'
+        },
+        fairplay: {
+            code: '<your fairplay code>',
+            keysystem: 'com.apple.fps.1_0',
+            assetid: '<assetid EZDRM only>',
+            license: 'https://<license>/getkey',
+            certificate: 'https://000000.cloudfront.net/fairplay.cer'
+        },
+    }
+}, function(player) {
+    // You can listen to any video events here
+    player.on('timeupdate', function(event) {
+        console.log('event', player.currentTime());
+    });
 });
 ```
 
