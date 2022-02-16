@@ -1,5 +1,7 @@
 # S3Bubble Player
 
+![S3Bubble Player](https://s3b-assets-bucket.s3.amazonaws.com/screenshot_2022_02_16_at_18.43.50.png)
+
 ```
 npm install @s3bubble/player
 ```
