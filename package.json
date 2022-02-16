@@ -1,6 +1,6 @@
 {
     "name": "@s3bubble/player",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Standalone S3Bubble Media Player",
     "main": "index.js",
     "scripts": {
@@ -38,6 +38,7 @@
         "http-server": "^14.1.0"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.0.0",
         "@s3bubble/videojs-contrib-dash-with-quality-levels": "^5.1.2",
         "@s3bubble/videojs-s3bubble-bitrate-switcher": "0.0.6",
         "@s3bubble/videojs-s3bubble-mediatailor": "0.0.3",
