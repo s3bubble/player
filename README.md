@@ -45,6 +45,27 @@ s3bubble('<your div>').drm({
         para: '<your description>',
         showSocial: true,
     },
+    tracks: [
+        {
+            src: '/captions/it.vtt',
+            kind: 'captions',
+            srclang: 'it',
+            label: 'Italian'
+        },
+        {
+            src: '/captions/fr.vtt',
+            kind: 'captions',
+            srclang: 'fr',
+            label: 'French',
+            default: true
+        },
+        {
+            src: '/captions/chapters.vtt',
+            kind: 'chapters',
+            srclang: 'de',
+            label: 'German'
+        }
+    ],
     drm: {
         authenticationXml: '<authenticationXml BuyDRM only>',
         widevine: {
