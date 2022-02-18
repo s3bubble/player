@@ -99,7 +99,7 @@ s3bubble('<div>').drm({
             keysystem: 'com.apple.fps.1_0',
             assetid: '<assetid EZDRM only>',
             license: 'https://<license>/getkey',
-            certificate: 'https://000000.cloudfront.net/fairplay.cer'
+            certificate: 'https://00000000000.cloudfront.net/fairplay.cer'
         },
     }
 }, function(player) {
@@ -141,7 +141,7 @@ window.s3bubbleGlobals = {
     }, ],
     api: '<api key>',
     locale: 'en', 
-    poster: 'https://images.pexels.com/photos/8748734/pexels-photo-8748734.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+    poster: 'https://images.pexels.com/photos/8748734/pexels-photo-8748734.jpeg',
     drm: {
         widevine: {
             keysystem: 'com.widevine.alpha',
@@ -150,7 +150,7 @@ window.s3bubbleGlobals = {
         fairplay: {
             keysystem: 'com.apple.fps.1_0',
             license: 'https://<license>.com',
-            certificate: 'https://d25hd5yfa00000.cloudfront.net/fairplay.cer'
+            certificate: 'https://00000000000.cloudfront.net/fairplay.cer'
         },
         playeready: {
             keysystem: 'com.microsoft.playready',
