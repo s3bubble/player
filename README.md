@@ -7,7 +7,7 @@ npm install @s3bubble/player
 ```
 ## BuyDRM Example - [Open Website](https://buydrm.com)
 ```js
-s3bubble('buyDRM').drm({
+s3bubble('<div>').drm({
     drm: {
         authenticationXml: '<authenticationXml>',
         widevine: {
@@ -31,7 +31,7 @@ s3bubble('buyDRM').drm({
 ```
 ## EZDRM Example - [Open Website](https://www.ezdrm.com)
 ```js
-s3bubble('EZDRM').drm({
+s3bubble('<div>').drm({
     drm: {
         widevine: {
             code: '<widevine code>',
@@ -111,8 +111,8 @@ s3bubble('<div>').drm({
 ```
 ## Basic Example
 ```js
-s3bubble('<your div>').video({
-    code: '<your code>'
+s3bubble('<div>').video({
+    code: '<code>'
 }, function(player) {
     // You can listen to any video events here
     player.on('timeupdate', function(event) {
