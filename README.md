@@ -5,7 +5,7 @@
 ```
 npm install @s3bubble/player
 ```
-## BuyDRM Example - [open website](https://buydrm.com)
+## BuyDRM Example - [Open Website](https://buydrm.com)
 ```js
 s3bubble('buyDRM').drm({
     drm: {
@@ -29,7 +29,7 @@ s3bubble('buyDRM').drm({
     }
 });
 ```
-## EZDRM Example - [open website](https://www.ezdrm.com)
+## EZDRM Example - [Open Website](https://www.ezdrm.com)
 ```js
 s3bubble('EZDRM').drm({
     drm: {
@@ -52,7 +52,7 @@ s3bubble('EZDRM').drm({
     }
 });
 ```
-## DRM Example
+## Extra DRM Example
 ```js
 s3bubble('<div>').drm({
     meta: {
