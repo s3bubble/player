@@ -5,6 +5,130 @@
 ```
 npm install @s3bubble/player
 ```
+## BuyDRM Example
+```js
+s3bubble('buyDRM').drm({
+    drm: {
+        authenticationXml: '<authenticationXml>',
+        widevine: {
+            code: '<widevine code>',
+            keysystem: 'com.widevine.alpha',
+            license: 'https://wv-keyos.licensekeyserver.com/'
+        },
+        playready: {
+            code: '<playready code>',
+            keysystem: 'com.microsoft.playready',
+            license: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx'
+        },
+        fairplay: {
+            code: '<fairplay code>',
+            keysystem: 'com.apple.fps.1_0',
+            license: 'https://fp-keyos.licensekeyserver.com/getkey',
+            certificate: 'https://00000000000.cloudfront.net/fairplay.cer'
+        },
+    }
+});
+```
+## EZDRM Example
+```js
+s3bubble('EZDRM').drm({
+    drm: {
+        widevine: {
+            code: '<widevine code>',
+            keysystem: 'com.widevine.alpha',
+            license: 'https://widevine-dash.ezdrm.com/widevine-php/widevine-foreignkey.php?pX=000000'
+        },
+        playready: {
+            code: '<playready code>',
+            keysystem: 'com.microsoft.playready',
+            license: 'https://playready.ezdrm.com/cency/preauth.aspx?pX=000000'
+        },
+        fairplay: {
+            code: '<fairplay code>',
+            keysystem: 'com.apple.fps.1_0',
+            assetid: '8a450047-23f1-0000-8b58-9fd82cf6362c',
+            certificate: 'https://00000000000.cloudfront.net/fairplay.cer'
+        },
+    }
+});
+```
+## DRM Example
+```js
+s3bubble('<div>').drm({
+    meta: {
+        subTitle: '<sub title>',
+        title: '<title>',
+        para: '<description>',
+        showSocial: true,
+    },
+    tracks: [
+        {
+            src: '/captions/it.vtt',
+            kind: 'captions',
+            srclang: 'it',
+            label: 'Italian'
+        },
+        {
+            src: '/captions/fr.vtt',
+            kind: 'captions',
+            srclang: 'fr',
+            label: 'French',
+            default: true
+        },
+        {
+            src: '/captions/chapters.vtt',
+            kind: 'chapters',
+            srclang: 'de',
+            label: 'German'
+        }
+    ],
+    drm: {
+        authenticationXml: '<authenticationXml BuyDRM only>',
+        widevine: {
+            code: '<widevine code>',
+            keysystem: 'com.widevine.alpha',
+            license: 'https://<license>.com'
+        },
+        playready: {
+            code: '<playready code>',
+            keysystem: 'com.microsoft.playready',
+            license: 'https://<license>/rightsmanager.asmx'
+        },
+        fairplay: {
+            code: '<fairplay code>',
+            keysystem: 'com.apple.fps.1_0',
+            assetid: '<assetid EZDRM only>',
+            license: 'https://<license>/getkey',
+            certificate: 'https://000000.cloudfront.net/fairplay.cer'
+        },
+    }
+}, function(player) {
+    // You can listen to any video events here
+    player.on('timeupdate', function(event) {
+        console.log('event', player.currentTime());
+    });
+});
+```
+## Basic Example
+```js
+s3bubble('<your div>').video({
+    code: '<your code>'
+}, function(player) {
+    // You can listen to any video events here
+    player.on('timeupdate', function(event) {
+        console.log('event', player.currentTime());
+    });
+});
+```
+## HTML Example
+
+``` html
+<div class="s3bv" data-code="<your code>"></div>
+```
+
+``` html
+<div class="s3bdrm" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
+```
 
 ## Setup Globals - Player Options Will Override DRM Globals 
 ```js
@@ -35,86 +159,5 @@ window.s3bubbleGlobals = {
     }
 }
 ```
-
-## DRM Example
-```js
-s3bubble('<your div>').drm({
-    meta: {
-        subTitle: '<your sub title>',
-        title: '<your title>',
-        para: '<your description>',
-        showSocial: true,
-    },
-    tracks: [
-        {
-            src: '/captions/it.vtt',
-            kind: 'captions',
-            srclang: 'it',
-            label: 'Italian'
-        },
-        {
-            src: '/captions/fr.vtt',
-            kind: 'captions',
-            srclang: 'fr',
-            label: 'French',
-            default: true
-        },
-        {
-            src: '/captions/chapters.vtt',
-            kind: 'chapters',
-            srclang: 'de',
-            label: 'German'
-        }
-    ],
-    drm: {
-        authenticationXml: '<authenticationXml BuyDRM only>',
-        widevine: {
-            code: '<your widevine code>',
-            keysystem: 'com.widevine.alpha',
-            license: 'https://<license>.com'
-        },
-        playready: {
-            code: '<your playready code>',
-            keysystem: 'com.microsoft.playready',
-            license: 'https://<license>/rightsmanager.asmx'
-        },
-        fairplay: {
-            code: '<your fairplay code>',
-            keysystem: 'com.apple.fps.1_0',
-            assetid: '<assetid EZDRM only>',
-            license: 'https://<license>/getkey',
-            certificate: 'https://000000.cloudfront.net/fairplay.cer'
-        },
-    }
-}, function(player) {
-    // You can listen to any video events here
-    player.on('timeupdate', function(event) {
-        console.log('event', player.currentTime());
-    });
-});
-```
-
-## Basic Example
-```js
-s3bubble('<your div>').video({
-    code: '<your code>'
-}, function(player) {
-    // You can listen to any video events here
-    player.on('timeupdate', function(event) {
-        console.log('event', player.currentTime());
-    });
-});
-```
-
-## HTML Example
-
-``` html
-<div class="s3bv" data-code="<your code>"></div>
-```
-
-``` html
-<div class="s3bdrm" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
-```
-
 ## Video Example
 [open demo](https://s3bubble.com/documentation/example-ezdrm-widevine-fairplay-playready-dash-hls)

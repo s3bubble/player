@@ -1,26 +1,30 @@
 {
     "name": "@s3bubble/player",
-    "version": "0.1.6",
-    "description": "Standalone S3Bubble Media Player",
+    "version": "0.1.7",
+    "description": "Standalone S3Bubble DRM Media Player",
     "main": "index.js",
-    "scripts": {
-        "start": "http-server -S -C cert.pem -K key.pem"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/s3bubble/player.git"
     },
     "keywords": [
-        "aws",
-        "ssai",
-        "ads",
-        "media",
         "EZDRM",
+        "BuyDRM",
+        "Keyos",
+        "Widevine",
+        "Playready",
+        "Fairplay",
+        "Chromecast",
+        "AirPlay",
+        "DRM",
+        "AWS",
+        "SSAI",
+        "CSAI",
+        "media",
         "video",
-        "player",
-        "DRM"
+        "player"
     ],
-    "author": "Samuel East",
+    "author": "S3Bubble",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/s3bubble/player/issues"
@@ -34,8 +38,7 @@
         "grunt-contrib-jshint": "2.1.0",
         "grunt-contrib-qunit": "3.1.0",
         "grunt-contrib-uglify": "4.0.1",
-        "grunt-contrib-watch": "1.1.0",
-        "http-server": "^14.1.0"
+        "grunt-contrib-watch": "1.1.0"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.0.0",
@@ -44,8 +47,6 @@
         "@s3bubble/videojs-s3bubble-mediatailor": "0.0.3",
         "@s3bubble/videojs-s3bubble-settings-menu": "0.0.3",
         "@silvermine/videojs-chromecast": "1.3.2",
-        "crypto-js": "3.3.0",
-        "js-cookie": "2.2.1",
         "m3u8-parser": "4.7.0",
         "video.js": "^7.17.0",
         "videojs-contextmenu-ui": "5.2.0",
