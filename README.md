@@ -111,7 +111,8 @@ s3bubble('<div>').drm({
 ```
 ## Basic Example
 ```js
-s3bubble('<div>').video({
+s3bubble('<div>').media({
+    type: '<audio | video>',
     code: '<code>'
 }, function(player) {
     // You can listen to any video events here
@@ -133,6 +134,7 @@ s3bubble('<div>').video({
 ## Setup Globals - Player Options Will Override DRM Globals 
 ```js
 window.s3bubbleGlobals = {
+    preventScreenRecording: true,
     debug: false,
     autoplay: true,
     poweredBy: [{
