@@ -1,6 +1,11 @@
-# S3Bubble Player
+# S3Bubble DRM Video Player
 
-![S3Bubble Player](https://s3b-assets-bucket.s3.amazonaws.com/screenshot_2022_02_16_at_18.43.50.png)
+![S3Bubble Video Player](https://s3b-assets-bucket.s3.amazonaws.com/screenshot_2022_02_16_at_18.43.50.png)
+
+# S3Bubble DRM Audio Waveform Player
+
+![S3Bubble Audio Player](https://s3b-assets-bucket.s3.amazonaws.com/audio-player.png)
+
 
 ```
 npm install @s3bubble/player
@@ -8,6 +13,7 @@ npm install @s3bubble/player
 ## BuyDRM Example - [Open Website](https://buydrm.com)
 ```js
 s3bubble('<div>').drm({
+    type: '<video | audio>',
     drm: {
         authenticationXml: '<authenticationXml>',
         widevine: {
@@ -32,6 +38,7 @@ s3bubble('<div>').drm({
 ## EZDRM Example - [Open Website](https://www.ezdrm.com)
 ```js
 s3bubble('<div>').drm({
+    type: '<video | audio>',
     drm: {
         widevine: {
             code: '<widevine code>',
@@ -55,6 +62,7 @@ s3bubble('<div>').drm({
 ## Extra DRM Example
 ```js
 s3bubble('<div>').drm({
+    type: '<video | audio>',
     meta: {
         subTitle: '<sub title>',
         title: '<title>',
@@ -161,5 +169,5 @@ window.s3bubbleGlobals = {
     }
 }
 ```
-## Video Example
-[open demo](https://s3bubble.com/documentation/example-ezdrm-widevine-fairplay-playready-dash-hls)
+## Video Tutorial
+[open demo](https://www.youtube.com/watch?v=9F_SbFPCz_0)
