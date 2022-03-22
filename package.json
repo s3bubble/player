@@ -1,6 +1,6 @@
 {
     "name": "@s3bubble/player",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Standalone S3Bubble DRM Media Player",
     "main": "index.js",
     "repository": {

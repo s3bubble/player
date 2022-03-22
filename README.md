@@ -132,11 +132,11 @@ s3bubble('<div>').media({
 ## HTML Example
 
 ``` html
-<div class="s3bv" data-code="<your code>"></div>
+<div class="s3bmedia" data-type="<video|audio>" data-code="<your code>"></div>
 ```
 
 ``` html
-<div class="s3bdrm" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
+<div class="s3bdrm" data-type="<video|audio>" data-widevine="<your widevine code>" data-playready="<your playready code>" data-fairplay="<your fairplay code>" data-assetid="<your fairplay asset id from ezdrm>"></div>
 ```
 
 ## Setup Globals - Player Options Will Override DRM Globals 
